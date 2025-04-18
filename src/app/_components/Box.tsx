@@ -85,8 +85,8 @@ export default function Box(): React.JSX.Element {
 
   return (
     <div className="flex w-full">
-      <Lists lists={lists} setActiveList={setActiveList} setLists={setLists}/>
-      <Items list={activeList} />
+      <Lists lists={lists} setActiveList={setActiveList} setLists={setLists} />
+      <Items list={activeList} setLists={setLists} lists={lists} />
     </div>
   );
 }

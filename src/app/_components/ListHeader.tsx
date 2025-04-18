@@ -44,15 +44,20 @@ export default function ListHeader({
       name: e.target.name.value,
       description: e.target.description.value,
       items: [],
-      id: Math.random(),
+      id: Date.now(),
     };
     setLists([...lists, newList]);
   };
 
   return (
-    <div className="flex flex-row justify-between">
+    <div className="flex flex-row justify-between mb-4">
       <h1 className="text-3xl font-bold">Your Lists</h1>
-      <button onClick={handleOpen}>Add a list</button>
+      <button
+        onClick={handleOpen}
+        className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+      >
+        Add a list
+      </button>
       <Modal isOpen={open} onClose={handleClose}>
         <form onSubmit={handleFormSubmit}>
           <input
@@ -65,7 +70,12 @@ export default function ListHeader({
             placeholder="write a description of your list"
             className="border border-[1] p-2.5"
           />
-          <button type="submit">Create</button>
+          <button
+            type="submit"
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+          >
+            Create
+          </button>
         </form>
       </Modal>
     </div>

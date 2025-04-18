@@ -28,7 +28,7 @@ export default function Lists({
   setLists,
 }: AppProps): React.JSX.Element {
   return (
-    <div className="w-1/3 p-4 bg-red-500">
+    <div className="w-1/3 p-4 bg-red-200">
       <ListHeader lists={lists} setLists={setLists} />
       <ul>
         {lists &&
